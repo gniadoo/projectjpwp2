@@ -89,7 +89,7 @@ public class Main extends Application  {
         hBox.setStyle("-fx-background-color: #5fa9ff");
 
         //SnapshotParameters params = new SnapshotParameters();        //
-        //params.setFill(Color.TRANSPARENT);                           //tu jest ta konwersja (nie działa) canvasa do img co mówięś że overkill
+        //params.setFill(Color.TRANSPARENT);                           //tu jest ta konwersja (nie działa) canvasa do img
         //Image snapshot = canvas.snapshot(params, null);              //
         //snapshot.getPixelReader().getArgb();                         //
         return hBox;
@@ -106,5 +106,5 @@ public class Main extends Application  {
         return hBox;
     }
 
-// no i plan prezentacji elooo
+// no i plan prezentacji
 }
