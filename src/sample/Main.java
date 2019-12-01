@@ -3,13 +3,10 @@ package sample;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.PixelReader;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -19,7 +16,7 @@ import javafx.stage.Stage;
 public class Main extends Application  {
 
     Stage window;                   //główne okienko
-    Scene scene1, scene2, scene3;   //trzy opcje do wejścia z menu
+    Scene menu, rozgrywka, ranking;   //trzy opcje do wejścia z menu
 
     public static void main(String[] args){
         launch(args);
@@ -56,15 +53,15 @@ public class Main extends Application  {
         layout2.setStyle("-fx-background-color: green");
 
 
-        scene1 = new Scene(layout1, 800, 530);
-        scene2 = new Scene(layout2, 800, 530);
+        menu = new Scene(layout1, 800, 530);
+        rozgrywka = new Scene(layout2, 800, 530);
 
-        button1.setOnAction(e -> {window.setScene(scene2); /*context.clearRect(0, 0, 800, 495);*/});
+        button1.setOnAction(e -> {window.setScene(rozgrywka); /*context.clearRect(0, 0, 800, 495);*/});
         //button2.setOnAction(e -> window.setScene(scene3));
         button3.setOnAction(e -> window.close());
 
 
-        window.setScene(scene1);
+        window.setScene(menu);
         window.setTitle("Draw that thing");
         window.show();
 
@@ -100,7 +97,7 @@ public class Main extends Application  {
 
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.CENTER);
-        button4.setOnAction(e-> {window.setScene(scene1); context.clearRect(0, 0, 800, 495);});
+        button4.setOnAction(e-> {window.setScene(menu); context.clearRect(0, 0, 800, 495);});
         //hBox.setSpacing(10);
         hBox.getChildren().add(button4);
         return hBox;
