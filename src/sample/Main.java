@@ -79,7 +79,7 @@ public class Main extends Application  {
         window.show();
 
     }
-    public HBox getHBox1(Canvas canvas){        //tutej cały algorytm do rysowania na canvasie
+    public HBox getHBox1(Canvas canvas){        //cały algorytm do rysowania na canvasie
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setLineWidth(20);
         gc.setStroke(Color.BLACK);
@@ -97,14 +97,9 @@ public class Main extends Application  {
         HBox hBox = new HBox();
         hBox.getChildren().add(canvas);
         hBox.setStyle("-fx-background-color: #414F66");
-
-        //SnapshotParameters params = new SnapshotParameters();        //
-        //params.setFill(Color.TRANSPARENT);                           //tu jest ta konwersja (nie działa) canvasa do img co mówięś że overkill
-        //Image snapshot = canvas.snapshot(params, null);              //
-        //snapshot.getPixelReader().getArgb();                         //
         return hBox;
     }
-    public HBox getHBox2(Canvas canvas){                //a to jest se menu dolne w okienku rozgrywki
+    public HBox getHBox2(Canvas canvas){                //dolne w okienku rozgrywki
         var context = canvas.getGraphicsContext2D();
         Button button4 = new Button();
         button4.setGraphic(new ImageView(menuimage));
@@ -117,5 +112,4 @@ public class Main extends Application  {
         return hBox;
     }
 
-// no i plan prezentacji elooo
 }
